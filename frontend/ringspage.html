@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/ringspage.css">
+</head>
+<body>
+    <div id="container">
+        <div id="containertopimg">
+            <img src="https://banner.caratlane.com/live-images/10c2cf82f2ad425b960f2587933652a7.jpg" alt="rings">
+        </div>
+
+        <!-- top select div -->
+
+        <div id="topselectcontainer">
+            
+                <a  href=""><button class="selecat">All</button></a>
+                <a  href=""><button class="selecat">try at home</button></a>
+                <a   href=""><button class="selecat">designs in store</button></a>
+                <a   href=""><button class="selecat">Fast Delivery</button></a>
+              
+                <a href=""><button class="selecat">New In</button></a>
+           
+         
+           <!-- <div id="select"> -->
+            <select name="" id="sort" >
+                <option value="rec" id="rec">Recommendation</option>
+                <option value="asc" id="asc">Sort Low To High</option>
+                <option value="desc" id="desc">Sort High To Low</option>
+            </select>
+        <!-- </div> -->
+        </div>
+
+
+        <!-- rendering data -->
+
+        <div id="midcontainer">
+            <div id="filtercontainer">
+                    
+                        <p class="pcenter">Filter By</p>
+                   <div class="filter">
+                    <h4 class="price">Price</h4>
+                        
+
+                     <input type="radio" id="price1" name="price" value="10000">
+                     <label for="price1">₹5,000 - ₹10,000</label><br>
+                     <input type="radio" id="price2" name="price" value="60">
+                     <label for="price2">₹10,000 - ₹15,000</label><br>  
+                     <input type="radio" id="price3" name="price" value="100">
+                     <label for="price3">₹15,000 - ₹20,0000</label><br>
+                     <input type="radio" id="price4" name="price" value="100">
+                     <label for="price4">₹20,000 - ₹30,0000</label><br>
+                     <input type="radio" id="price5" name="price" value="100">
+                     <label for="price5">₹30,000 - ₹40,0000</label><br>
+                     <input type="radio" id="price6" name="price" value="100">
+                     <label for="price6">₹50,000 - ₹60,0000</label><br>
+                        
+                   </div>
+
+
+                   <div class="filter">
+                    <h4 class="price">Product Type</h4>
+                        
+
+                     <input type="radio" id="type1" name="type" value="earings">
+                     <label for="price1">Earings</label><br>
+                     <input type="radio" id="type2" name="type" value="rings">
+                     <label for="price2">Rings</label><br>  
+                     <input type="radio" id="type3" name="type" value="bracelets">
+                     <label for="price3">Bracelets</label><br>
+                     <input type="radio" id="type4" name="type" value="bangles">
+                     <label for="price4">Bangles</label><br>
+                     <input type="radio" id="type5" name="type" value="mangalasutra">
+                     <label for="price5">Mangalsutra</label><br>
+                     <input type="radio" id="type6" name="type" value="newarrival">
+                     <label for="price6">₹New Arrival</label><br>
+                        
+                   </div>
+
+
+                   
+
+            </div>
+            <div id="renderdata"></div>
+        </div>
+
+       
+    </div>
+</body>
+</html>
+
+<script  type="module" src="./scripts/ringspage.js"></script>
