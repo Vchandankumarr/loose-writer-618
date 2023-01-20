@@ -15,7 +15,7 @@
     
     margin-top: -4px;
     height: auto;
-    background-color: aqua;
+    background-color:#f2d0f7;
 }
 
 .selecat{
@@ -45,9 +45,9 @@
 
 #midcontainer{
     width:100%;
-    height:600px;
+    height:auto;
     display: flex;
-    border:1px solid yellow;
+    /* border:1px solid yellow; */
     justify-content:space-evenly;
   
     margin-top: 30px;
@@ -56,10 +56,16 @@
 
 #filtercontainer{
     width:30%;
-    height:400px;
-    border:1px solid blue;
+    height:500px;
+    /* border:1px solid blue; */
     overflow: scroll;
     overflow-x: hidden;
+    float: left;
+   
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+    
    
     
 }
@@ -77,7 +83,7 @@
 
 
 .filter{
-    border:1px solid;
+   
     width:70%;
     margin:auto;
     margin-top: 10px;
@@ -108,9 +114,86 @@
 #renderdata{
     width: 60%;
     height:100%;
-    border:1px solid red;
+    /* border:1px solid red; */
     
 }
 
 
+#renderdata{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin:auto
+}
 
+#card{
+    /* border:1px solid; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#image{
+    width: 100%;
+    /* border: 1px solid; */
+}
+#trial{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#price{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#cardtop{
+    display: flex;
+    justify-content:space-between
+}
+
+#wishlist{
+    background-color: transparent;
+    border: 0;
+}
+#wishlist:hover{
+    cursor: pointer;
+}
+
+#addtocart{
+  float: right;
+}
+
+#tryhome{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 4px;
+    /* border:2px; */
+    border-color: #826d93;
+    color:#826d93
+}
+
+#livevedio{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 4px;
+    /* border:2px; */
+    border-color: #75d167;
+    color:#75d167
+}
+
+#addtocart{
+    background-color: transparent;
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #9562f8;
+    color: white;
+    font-size: 12px;
+    
+}
+#addtocart:hover{
+    cursor: pointer;
+    background-color: #c55aeb;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

@@ -9,7 +9,7 @@ const createproductSchema=mongoose.Schema({
     actualprice:Number,
     quantity:Number,
     arrival:String,
-    image2:String,
+    image1:String,
     Book:String,
     livecall:String
 })
