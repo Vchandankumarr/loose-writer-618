@@ -1,5 +1,5 @@
 const express=require("express")
-const { Createproductmodel } = require("../models/product.mode")
+const { Createproductmodel } = require("../models/product.model")
 
 const userrender=express.Router()
 
@@ -18,6 +18,16 @@ userrender.get("/products",async(req,res)=>
   
 })
 
+userrender.get("/productbyid/:id",async(req,res)=>
+{
+    let id=req.params.id
+    try {
+        const product=await Createproductmodel.findOne({_id:id})
+        res.send(product)
+    } catch (error) {
+        res.send("cannot get data")
+    }
+})
 
 userrender.get("/filterbyprice",async(req,res)=>
 {

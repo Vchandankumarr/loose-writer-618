@@ -2,7 +2,7 @@
 
 console.log("product page")
 
-let query="ring"
+let query="newarrival"
 async function products(){
     try {
       if(query!==undefined)
@@ -40,8 +40,8 @@ function renderdata(data)
                             <p id="seller">${element.seller}</p>
                         </div>
                         <div >
-                            <button id="wishlist" > 
-                                <i data-id=${element._id} class="fa fa-heart-o"  aria-hidden="true" style="font-size:24px;" ></i>
+                            <button id="wishlist"> 
+                                <i class="fa fa-heart-o"  aria-hidden="true" style="font-size:24px;" ></i>
                                    </button>
                             </div>
                     </div>
@@ -60,88 +60,12 @@ function renderdata(data)
                     
                     </div id=cart>
                     
-                    <button id="addtocart" data-id=${element._id}><i class="fa fa-cart-plus" aria-hidden="true"></i>Add to Cart</button>
+                    <button id="addtocart"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add to Cart</button>
                 </div>`
    })
 
     document.getElementById("renderdata").innerHTML=display.join(" ")
-
-    let btn=document.querySelectorAll("#addtocart");
-    for(let addCardBtn of btn){
-        addCardBtn.addEventListener("click",function(e){
-            // alert("Added On cart Page")
-            card_data(e.target.dataset.id);
-    })
-    };
-
-
-    let wishlist=document.querySelectorAll("#wishlist");
-    for(let wishlistBtn of wishlist){
-      wishlistBtn.addEventListener("click",function(e){
-            // alert("Added On cart Page")
-            card_data(e.target.dataset.id);
-    })
-    };
 }
-
-async function card_data(id)
-{
-console.log(id)
-try {
-   let res=await fetch(`http://localhost:6060/usersrender/productbyid/${id}`)
-   let data=await res.json()
-   console.log(data)
-} catch (error) {
-   console.log(error)
-}
-}
-
-// async function addtocart(data)
-// {
-//    try {
-//       let res=await fetch(`http://localhost:6060/cart/createcart`,{
-//          method:"POST",
-//          headers:{
-//             "Content-Type":"application/json",
-           
-//          },
-//          body:JSON.stringify(data)
-//        }) 
-//        if(res.ok)
-//        {
-//          let result =await res
-//          console.log(result)
-//        }
-//    } catch (error) {
-      
-//    }
-// }
-
-
-
-// async function addtocart(data)
-// {
-//    try {
-//       let res=await fetch(`http://localhost:6060/wishlist/createwishlist`,{
-//          method:"POST",
-//          headers:{
-//             "Content-Type":"application/json",
-           
-//          },
-//          body:JSON.stringify(data)
-//        }) 
-//        if(res.ok)
-//        {
-//          let result =await res
-//          console.log(result)
-//        }
-//    } catch (error) {
-      
-//    }
-// }
-
-
-
 
 let sort=document.getElementById("sort")
 sort.addEventListener("click",()=>{
