@@ -1,5 +1,5 @@
 const express=require("express")
-const { Createproductmodel } = require("../models/product.mode")
+const { Createproductmodel } = require("../models/product.model")
 
 const adminproduct=express.Router()
 

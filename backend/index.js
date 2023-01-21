@@ -4,6 +4,8 @@ require("dotenv").config
 const{userrouter}=require("./routees/userrouter")
 const{adminproduct}=require("./routees/adminproduct.router")
 const {userrender}=require("./routees/userrenderrouter")
+const {userCartrouter}=require("./routees/usercartrouter")
+const {userwishlistrouter}=require("./routees/userwishlistrouter")
 const{authentication}=require("./middlewares/authenticationmiddleware")
 const cors = require('cors')
 
@@ -22,8 +24,15 @@ app.get("/",(req,res)=>
 app.use("/usersrender", userrender)
 app.use("/adminproducts",adminproduct)
 
+
+
 app.use("/users",userrouter)
+app.use("/cart",userCartrouter)
 app.use(authentication)
+
+app.use("/wishlist",userwishlistrouter)
+
+
 
 
 
