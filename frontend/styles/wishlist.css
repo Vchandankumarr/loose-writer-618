@@ -1,0 +1,102 @@
+#renderdata{
+    width: 90%;
+    margin:auto;
+   
+    
+}
+
+
+#renderdata{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin:auto
+}
+
+#card{
+    /* border:1px solid; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#image{
+    width: 100%;
+    /* border: 1px solid; */
+}
+#trial{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#price{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#cardtop{
+    display: flex;
+    justify-content:space-between
+}
+
+#wishlist{
+    background-color: transparent;
+    border: 0;
+}
+#wishlist:hover{
+    cursor: pointer;
+}
+
+#addtocart{
+  float: right;
+}
+
+#tryhome{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 4px;
+    /* border:2px; */
+    border-color: #826d93;
+    color:#826d93
+}
+
+#livevedio{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 4px;
+    /* border:2px; */
+    border-color: #75d167;
+    color:#75d167
+}
+
+#addtocart{
+    background-color: transparent;
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #9562f8;
+    color: white;
+    font-size: 12px;
+    
+}
+#addtocart:hover{
+    cursor: pointer;
+    background-color: #c55aeb;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#remove{
+    background-color: transparent;
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #9562f8;
+    color: white;
+    font-size: 15px;
+}
+
+#remove:hover{
+    cursor: pointer;
+    background-color: #c55aeb;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

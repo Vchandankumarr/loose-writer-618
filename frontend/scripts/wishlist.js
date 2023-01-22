@@ -1,41 +1,28 @@
-console.log("cart page")
-
+console.log("wish list page")
 
 let totalproduct=document.getElementById("totalproduct")
-let subtotal=document.getElementById("subtotal")
-let save=document.getElementById("save")
-let totalcost=document.getElementById("totalcost")
 
 
-
-
-async function Cart()
+async function wishlist()
 {
     try {
-        let res=await fetch(`http://localhost:6060/cart`,{
-            headers:{
+        let res=await fetch("http://localhost:6060/wishlist",{
+          headers:{
 
-                "Authorization":localStorage.getItem("token")
-            }
+            "Authorization":localStorage.getItem("token")
+        }
         })
-        let data=await res.json()
-        renderdata(data)
+        let data =await res.json()
         console.log(data)
         totalproduct.innerHTML= "Total Product: "+data.length
-        console.log(typeof data[0].price)
-        const producttotal = data.reduce(
-            (accumulator, el) => (accumulator) + (el.price),0
-            );
-            console.log(producttotal)
-            subtotal.innerHTML="₹"+producttotal
-            totalcost.innerHTML="₹"+(producttotal-9874)
-       
+        renderdata(data)
     } catch (error) {
-        console.log(error)
+        console.log(error)   
     }
 }
 
-Cart()
+
+wishlist()
 
 
 
@@ -69,7 +56,7 @@ function renderdata(data)
                     
                     </div id=cart>
                     <button id="remove" data-id=${element._id}>remove</button>
-                    <button id="addtowishlist" data-id=${element._id}>Add to wishlist</button>
+                    <button id="addtocart" data-id=${element._id}>Add to cart</button>
                 </div>`
    })
 
@@ -85,11 +72,11 @@ function renderdata(data)
         })
     }
 
-    let wishlist = document.querySelectorAll("#addtowishlist");
-    for (let wishlistBtn of wishlist) {
-      wishlistBtn.addEventListener("click", function (e) {
+    let cart = document.querySelectorAll("#addtocart");
+    for (let cartbtn of cart) {
+        cartbtn.addEventListener("click", function (e) {
         // alert("Added On cart Page")
-        wishlistcard_data(e.target.dataset.id);
+        cartcard_data(e.target.dataset.id);
       });
     }
 }
@@ -97,7 +84,7 @@ function renderdata(data)
 
 
 
-async function wishlistcard_data(id) {
+async function cartcard_data(id) {
     console.log(id);
     try {
       let res = await fetch(
@@ -106,22 +93,22 @@ async function wishlistcard_data(id) {
       let data = await res.json();
       console.log(data);
   
-      addtowishlist(data);
+      addtocart(data);
     } catch (error) {
       console.log(error);
     }
   }
   
-  async function addtowishlist(data) {
+  async function addtocart(data) {
     try {
       console.log("function add to wishlist");
-      let res = await fetch(`http://localhost:6060/wishlist/createwihslist`, {
+      let res = await fetch(`http://localhost:6060/cart/createcart`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
           "Content-Type": "application/json",
           "Authorization":localStorage.getItem("token")
-        }
+        },
       });
       if (res.ok) {
         const data = await res.json();
@@ -138,7 +125,7 @@ async function wishlistcard_data(id) {
   async function removeproduct(id) {
     try {
         console.log("try catch function")
-   const res=  await fetch(`http://localhost:6060/cart/delete/${id}`,{
+   const res=  await fetch(`http://localhost:6060/wishlist/delete/${id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json",
@@ -146,21 +133,12 @@ async function wishlistcard_data(id) {
             }
         })
         const ans=await res.json()
-        console.log("cart user ID")
+
         console.log(ans)
-        Cart()
+        wishlist()
         alert(ans.message)
-       
-        
         // alert("note removed")
     } catch (error) {
         
     }
-  }
-
-
-
-  function checkout()
-  {
-    window.location.href="./html/payment.html"
   }
