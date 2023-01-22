@@ -95,7 +95,7 @@
  let bag = [];
     async function products() {
         try {
-            let res = await fetch(`http://localhost:6060/adminproducts/products`)
+            let res = await fetch(`https://indigo-hummingbird-boot.cyclic.app/adminproducts/products`)
             let data = await res.json()
             console.log(data)
             bag = data
@@ -148,7 +148,7 @@
             for (let i = 0; i < allInputTags.length; i++) {
                 userObj[allInputTags[i].id] = allInputTags[i].value
             }
-            let res = await fetch(`http://localhost:6060/adminproducts/update/${id}`, {
+            let res = await fetch(`https://indigo-hummingbird-boot.cyclic.app/adminproducts/update/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

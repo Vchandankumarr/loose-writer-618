@@ -7,13 +7,13 @@ async function products() {
   try {
     if (query !== undefined) {
       let res = await fetch(
-        `http://localhost:6060/usersrender/products?type=${query}`
+        `https://indigo-hummingbird-boot.cyclic.app/usersrender/products?type=${query}`
       );
       let data = await res.json();
       console.log(data);
       renderdata(data);
     } else {
-      let res = await fetch(`http://localhost:6060/usersrender/products`);
+      let res = await fetch(`https://indigo-hummingbird-boot.cyclic.app/usersrender/products`);
       let data = await res.json();
       console.log(data);
       renderdata(data);
@@ -80,7 +80,7 @@ async function cartcard_data(id) {
   console.log(id);
   try {
     let res = await fetch(
-      `http://localhost:6060/usersrender/productbyid/${id}`
+      `https://indigo-hummingbird-boot.cyclic.app/usersrender/productbyid/${id}`
     );
     let data = await res.json();
     console.log(data);
@@ -93,7 +93,7 @@ async function cartcard_data(id) {
 async function addtocart(data) {
   try {
     console.log("inside post");
-    let res = await fetch(`http://localhost:6060/cart/createcart`, {
+    let res = await fetch(`https://indigo-hummingbird-boot.cyclic.app/cart/createcart`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -113,7 +113,7 @@ async function wishlistcard_data(id) {
   console.log(id);
   try {
     let res = await fetch(
-      `http://localhost:6060/usersrender/productbyid/${id}`
+      `https://indigo-hummingbird-boot.cyclic.app/usersrender/productbyid/${id}`
     );
     let data = await res.json();
     console.log(data);
@@ -127,7 +127,7 @@ async function wishlistcard_data(id) {
 async function addtowishlist(data) {
   try {
     console.log("function add to wishlist");
-    let res = await fetch(`http://localhost:6060/wishlist/createwihslist`, {
+    let res = await fetch(`https://indigo-hummingbird-boot.cyclic.app/wishlist/createwihslist`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -169,7 +169,7 @@ function sorting() {
 const sortLowtoHigh = async () => {
   try {
     const res = await fetch(
-      `http://localhost:6060/usersrender/sorting?type=${query}&sort=asc`
+      `https://indigo-hummingbird-boot.cyclic.app/usersrender/sorting?type=${query}&sort=asc`
     );
     const data = await res.json();
     console.log(data);
@@ -182,7 +182,7 @@ const sortLowtoHigh = async () => {
 const sortHightoLow = async () => {
   try {
     const res = await fetch(
-      `http://localhost:6060/usersrender/sorting?type=${query}&sort=dsc`
+      `https://indigo-hummingbird-boot.cyclic.app/usersrender/sorting?type=${query}&sort=dsc`
     );
     const data = await res.json();
     console.log(data);
@@ -247,7 +247,7 @@ let filterbyprice = async (el) => {
   let value = el.value;
   try {
     let res = await fetch(
-      `http://localhost:6060/usersrender/filterbyprice?type=ring&filter=${value}`
+      `https://indigo-hummingbird-boot.cyclic.app/usersrender/filterbyprice?type=ring&filter=${value}`
     );
 
     let data = await res.json();
@@ -315,7 +315,7 @@ let filterbytype = async (element) => {
 
   try {
     let res = await fetch(
-      `http://localhost:6060/usersrender/filterbytype/?type=${type}`
+      `https://indigo-hummingbird-boot.cyclic.app/usersrender/filterbytype/?type=${type}`
     );
     let data = await res.json();
     console.log(data);

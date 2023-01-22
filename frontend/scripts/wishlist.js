@@ -6,7 +6,7 @@ let totalproduct=document.getElementById("totalproduct")
 async function wishlist()
 {
     try {
-        let res=await fetch("http://localhost:6060/wishlist",{
+        let res=await fetch("https://indigo-hummingbird-boot.cyclic.app/wishlist",{
           headers:{
 
             "Authorization":localStorage.getItem("token")
@@ -88,7 +88,7 @@ async function cartcard_data(id) {
     console.log(id);
     try {
       let res = await fetch(
-        `http://localhost:6060/usersrender/productbyid/${id}`
+        `https://indigo-hummingbird-boot.cyclic.app/usersrender/productbyid/${id}`
       );
       let data = await res.json();
       console.log(data);
@@ -102,7 +102,7 @@ async function cartcard_data(id) {
   async function addtocart(data) {
     try {
       console.log("function add to wishlist");
-      let res = await fetch(`http://localhost:6060/cart/createcart`, {
+      let res = await fetch(`https://indigo-hummingbird-boot.cyclic.app/cart/createcart`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -125,7 +125,7 @@ async function cartcard_data(id) {
   async function removeproduct(id) {
     try {
         console.log("try catch function")
-   const res=  await fetch(`http://localhost:6060/wishlist/delete/${id}`,{
+   const res=  await fetch(`https://indigo-hummingbird-boot.cyclic.app/wishlist/delete/${id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json",
