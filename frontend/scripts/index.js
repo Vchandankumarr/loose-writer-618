@@ -20,3 +20,9 @@ function changeImage(){
 setTimeout("changeImage()",3000)
 }
 changeImage()   
+
+
+function searchfunction()
+{
+    window.location.href='./ringspage.html'
+}

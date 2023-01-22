@@ -1,8 +1,7 @@
 const express=require("express")
 const { Createproductmodel } = require("../models/product.model")
-
 const adminproduct=express.Router()
-
+//const {admin_authentication} = require("../middlewares/admin.authentication.middleware")
 
 
 adminproduct.get("/products",async(req,res)=>
@@ -16,8 +15,9 @@ adminproduct.get("/products",async(req,res)=>
   
 })
 
+//  adminproduct.use(admin_authentication)
 
-adminproduct.post("/create",async(req,res)=>
+adminproduct.post("/create" ,async(req,res)=>
 {
     payload=req.body
     // console.log(payload)
@@ -53,7 +53,7 @@ adminproduct.patch("/update/:id", async(req,res)=>{
 adminproduct.delete("/delete/:id", async(req,res)=>
 {
     const ID=req.params.id
-    console.log(ID)
+    // console.log(ID)
 
     try {
         await Createproductmodel.findByIdAndDelete({_id:ID})

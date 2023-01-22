@@ -24,17 +24,39 @@ body{
 .navbar-top{
     display:flex;
     justify-content: space-evenly;
-    background-color: gray;
+    background-color: #f6f4ff;
     padding: 20px ;
 }
 .navbar-top-content{
     padding-top: 20px;
 }
+#search_div{
+    margin-top: 12px;
+}
+#search_book{
+    height: 29px;
+    width: 150px;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid grey;
+    padding-left: 10px;
+
+}
+#search_btn{
+    background-color: #cc59e9;
+    width:30px;
+    padding:8px;
+    border:none;
+   margin-left: -30px; 
+   border-radius: 0px 5px 5px 0px;
+   cursor: pointer;
+   
+}
 .navbar-bottom{
     padding: 10px 20px;
     display:flex;
     justify-content: space-evenly;
-    background-color: rgba(58, 56, 56, 0.384);
+    background-color:#f9f9fa;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
           /* -----------slider-------- */
@@ -163,7 +185,7 @@ color: #8863fb;
 .middle-bottom-left p{
 padding: 40px 40px;
 }
-button{
+.btn{
     padding:15px 70px 15px 70px;
     background: linear-gradient(to right,#de57e5,#8863fb);
     border:none;
@@ -390,3 +412,38 @@ button{
     color: blue;
 }
 
+
+.submenu ul{
+    list-style: none;
+}
+.submenu a{
+    padding:15px;
+    display: block;
+    color:rgba(20, 19, 19, 0.7);
+}
+#menu{
+    position: relative;
+}
+
+.submenu{
+    height:100px;
+    background-color: white;
+    display: none;
+    position: absolute;
+    width: 200px;
+    top:100%; 
+    left:-100px ;
+    border-radius: 20px;
+} 
+.submenu h4{
+    border-radius: 20px;
+}
+
+#menu:hover .submenu{
+display:block;
+} 
+.submenu  a:hover{
+    color:black;
+    display: block;
+    background-color:#8863fb;
+}

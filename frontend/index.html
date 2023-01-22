@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewels: A Tanishq Partnership</title>
+    <title>caratlane: A Tanishq Partnership</title>
     <link rel="icon" href="https://www.linkpicture.com/q/jewels.com-2.png">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -16,10 +16,11 @@
     <div class="navbar">
         <div class="navbar-top">
             <div class="navbar-top-img">
-                <a href="#">
-                    <h1>Jewels</h1>
+                <a href="./index.html">
+                    <h1>Cartlane</h1>
                     <p>A Tanishq Partner</p>
                 </a>
+                <!-- <a href="./html/payment.html"></a> -->
             </div>
             <div class="navbar-top-content"><a href="#">
                     <span class="fa-solid fa-house"></span>
@@ -41,19 +42,32 @@
                     <span class="fa-solid fa-location-dot"></span>
                     <span> Pincode</span>
                 </a></div>
-            <div class="navbar-top-content"><a href="#"><i class="fa-solid fa-user"></i></a></div>
-            <div class="navbar-top-content"><a href="#"><i class="fa-solid fa-heart"></i></a></div>
-            <div class="navbar-top-content"><a href="#"><i class="fa-solid fa-basket-shopping"></i></a></div>
+            <div id="search_div" class="search_div">
+                <input type="text" id="search_book" placeholder="Search">
+                <button id="search_btn" onclick="searchfunction()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <!-- <button id="search_btn"><span class="material-symbols-outlined">search</span></button> -->
+            </div>
+            <div class="navbar-top-content" id="menu"><a href="#"><i class="fa-solid fa-user"></i></a>
+            <div class="submenu">
+                <ul>
+                    <li> <h4><a href="./html/admin-login.html">Login as Admin</a></h4></li>
+                    <li><h4><a href="./html/register.html">Login as User</a></h4></li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="navbar-top-content"><a href="./wishlist.html"><i class="fa-solid fa-heart"></i></a></div>
+            <div class="navbar-top-content"><a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a></div>
         </div>
         <div class="navbar-bottom">
-            <div><a href="#">NEW ARRIVALS</a></div>
-            <div><a href="#">RINGS</a></div>
-            <div><a href="#">EARRINGS</a></div>
-            <div><a href="#">BRACELETS & BANGLES</a></div>
-            <div><a href="#">SOLITAIRES</a></div>
-            <div><a href="#">MANGALSUTRA</a></div>
+            <div><a href="./newarrival.html">NEW ARRIVALS</a></div>
+            <div><a href="./ringspage.html">RINGS</a></div>
+            <div><a href="./earing.html">EARRINGS</a></div>
+            <div><a href="./bracelet.html">BRACELETS & BANGLES</a></div>
+            <div><a href="./solitaires.html">SOLITAIRES</a></div>
+            <div><a href="./mangalsutra.html">MANGALSUTRA</a></div>
             <div><a href="#">READY TO SHIP</a></div>
-            <div><a href="#">KIDS</a></div>
+            <div><a href="./kid.html">KIDS</a></div>
             <div><a href="#">OTHER JEWELLERY</a></div>
             <div><a href="#">GIFTING</a></div>
         </div>
@@ -190,7 +204,7 @@
                 make new ones!Please note:the old gold doesn't have to be from only caratlane .it can
                 be any gold jewellery you have.
             </p>
-            <button>Know More</button>
+            <button class="btn">Know More</button>
         </div>
 
     </div>
@@ -275,7 +289,7 @@
             only accessory i wore on my entire honeymoon. i love how delicate and <br>
             beautiful it is."</p>
         <p>Tanya Gupta via Instagram</p>
-        <button>Read More</button>
+        <button class="btn">Read More</button>
     </div>
     <!-- ------img-box-- -->
     <div class="head">
@@ -434,7 +448,7 @@
                 <p>Corporate : <a href="#">B2B@Jewels.Com</a></p>
                 <p>HR : <a href="#">Careers@Jewels.Com</a></p>
                 <p>Grievance :<a href="#"> Click Here</a></p>
-                <button>FIND A STORE</button>
+                <button class="btn">FIND A STORE</button>
             </div>
         </div>
         <div class="footer-bottom">
@@ -514,6 +528,6 @@
         <a href="#">SITE MAP/PRIVACY POLICYTERMS & CONDITIONSCORPORATE XCLUSIVEFREQUENTLY ASKED QUESTION</a>
     </div>
 </body>
-<script src="./styles/index.css"></script>
+<script src="./scripts/index.js"></script>
 
 </html>

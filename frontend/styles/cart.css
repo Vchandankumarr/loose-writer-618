@@ -1,23 +1,77 @@
 *{
     margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+                /* .......navbar.................. */
+
+.navbar{
+    display:flex;
+    flex-direction: column;
+    position: sticky;
+    top:0;
+    right:0;
+    left:0;
+    z-index: 1;
+}
+.navbar a{
+    text-decoration: none;
+    color:black;
+}
+.navbar-top{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #f6f4ff;
+    padding: 20px ;
+}
+.navbar-top-content{
+    padding-top: 20px;
+}
+#search_div{
+    margin-top: 12px;
+}
+#search_book{
+    height: 29px;
+    width: 150px;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid grey;
+    padding-left: 10px;
+
+}
+#search_btn{
+    background-color: #cc59e9;
+    width:30px;
+    padding:8px;
+    border:none;
+   margin-left: -30px; 
+   border-radius: 0px 5px 5px 0px;
+   cursor: pointer;
+   
+}
+.navbar-bottom{
+    padding: 10px 20px;
+    display:flex;
+    justify-content: space-evenly;
+    background-color:#f9f9fa;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #container{
     width:100%;
-    border:1px solid;
+    /* border:1px solid; */
     display: grid;
     grid-template-columns: 60% 35%;
     gap:5%;
     justify-content:space-evenly;
+    margin-top: 20px;
     
 }
 
 
-#leftcard{
-/* border:1px solid blue; */
-height: 466px;
 
-}
 
 #rightcard{
     /* border:1px solid blue; */
@@ -57,6 +111,12 @@ height: 466px;
         background-color: #c55aeb;
         color:white;
         border-radius: 10px;
+        font-size: 20px;
+    }
+    #checkout:hover{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        cursor: pointer;
+        font-size: 35px;
     }
 
 
@@ -137,6 +197,23 @@ height: 466px;
         
     }
     #addtowishlist:hover{
+        cursor: pointer;
+        background-color: #c55aeb;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+
+    #remove{
+        background-color: transparent;
+        padding: 10px;
+        border: 0;
+        border-radius: 3px;
+        background-color: #9562f8;
+        color: white;
+        font-size: 15px;
+    }
+
+    #remove:hover{
         cursor: pointer;
         background-color: #c55aeb;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
