@@ -142,3 +142,9 @@ async function cartcard_data(id) {
         
     }
   }
+
+
+  function clearlocalstorage()
+{
+    localStorage.clear()
+}

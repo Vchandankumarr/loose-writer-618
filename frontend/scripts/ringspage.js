@@ -327,6 +327,10 @@ let filterbytype = async (element) => {
   } catch (error) {}
 };
 
+function clearlocalstorage()
+{
+    localStorage.clear()
+}
 // let newcartitem={
 //    image,
 //    name,

@@ -426,7 +426,7 @@ padding: 40px 40px;
 }
 
 .submenu{
-    height:100px;
+    height:auto;
     background-color: white;
     display: none;
     position: absolute;

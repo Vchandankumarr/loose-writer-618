@@ -24,5 +24,35 @@ changeImage()
 
 function searchfunction()
 {
-    window.location.href='./ringspage.html'
+    window.location.href="./ringspage.html"
 }
+
+
+
+function clearlocalstorage()
+{
+    localStorage.clear()
+}
+
+
+// let login=document.getElementById("login")
+// // login.addEventListener("click", signout())
+
+// let logout=document.getElementById("logout")
+
+
+
+// logout.addEventListener("click",()=>{
+//     clearlocalstorage(event)
+//   })
+
+
+//   function clearlocalstorage(event)
+//   {
+//     event.preventdefault()
+//     console.log("inside local storage")
+//     // localStorage.clear()
+//   }
+
+
+
