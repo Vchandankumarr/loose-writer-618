@@ -1,5 +1,5 @@
 Cyclic deployment link===>>>>>>>>https://indigo-hummingbird-boot.cyclic.app/
 
 
-Netlify Link =========>>>>>>>>>>https://admirable-kataifi-d4fa11.netlify.app
+Netlify Link =========>>>>>>>>>>https://musical-hotteok-fa828d.netlify.app
                                
